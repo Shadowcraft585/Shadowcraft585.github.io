@@ -1,11 +1,13 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Project from '../components/Project.astro';
+import AstroSvg from '../assets/astro.svg';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Kevin Ganske" description="Kevin Ganske's website">
+	<h1 class="text-red-400">Hauptseite</h1>
+	<Project title="Minecraft Generator" href="/minecraft">
+		<p>Ein Generator für Minecraft Welten, Strukturen und mehr.</p>
+	</Project>
+	<img src={AstroSvg.src} alt="Astro Logo" class="w-32 mt-4" />
 </Layout>
