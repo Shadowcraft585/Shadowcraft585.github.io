@@ -1,13 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Project from '../components/Project.astro';
-import AstroSvg from '../assets/astro.svg';
+import Block from '../assets/graswuerfel.svg';
 ---
 
 <Layout title="Kevin Ganske" description="Kevin Ganske's website">
-	<h1 class="text-red-400">Hauptseite</h1>
+	<div class="flex items-center justify-center gap-2">
+		<h1 class="text-blue-400 font-bold text-3xl">Minecraft Generator</h1>
+		<img src={Block.src} alt="Minecraft Block" class="w-8 mt-1" />
+	</div>
 	<Project title="Minecraft Generator" href="/minecraft">
 		<p>Ein Generator für Minecraft Welten, Strukturen und mehr.</p>
 	</Project>
-	<img src={AstroSvg.src} alt="Astro Logo" class="w-32 mt-4" />
 </Layout>

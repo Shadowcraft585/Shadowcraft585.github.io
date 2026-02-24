@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Background from "../assets/background.svg";
 
 interface Props {
     title: string;
@@ -9,7 +10,7 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<html lang="de" class="bg-gray-200 text-zinc-900 dark:bg-slate-950 dark:text-gray-50">
+<html lang="de" class="bg-gray-900 text-center text-white">
     <head>
         <meta charset="utf-8" />
         <meta name="darkreader-lock" />
@@ -31,6 +32,7 @@ const { title, description } = Astro.props;
         <meta name="twitter:description" content={description} />
     </head>
     <body>
+        <img src={Background.src} alt="Background" class="fixed top-0 left-0 w-full h-full object-cover" />
         <slot />
     </body>
 </html>
