@@ -1,7 +1,43 @@
 ---
 import Project from '../../layouts/Project.astro';
+import Zeitstrahl from '../../assets/Zeitstrahl_neu.svg';
 ---
 
 <Project title='Kevin Ganske' description='Kevin Ganskes website'>
-	<h1 class="text-blue-400">Minecraft Generator</h1>
+	<h1 class="text-blue-400 text-3xl font-bold">Minecraft Generator</h1>
+	
+	<details class="mt-4">
+		<summary class="cursor-pointer text-lg text-blue-300 underline">Zukunft des Projekts</summary>
+		<img src={Zeitstrahl.src} alt="Zeitstrahl" class="w-460 mt-2 mx-auto relative z-10" />
+	</details>
+
+	<div class="mt-6 inline-block p-4 bg-gray-800 rounded border border-gray-600">
+		<p>
+			Den Prototypen findest du auf GitHub:
+			<a href="https://github.com/Shadowcraft585/minecraft-world-generator" class="text-blue-400 underline" target="_blank">minecraft-world-generator</a>
+		</p>
+	</div>
+
+	<section class="mt-12 px-4 lg:px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+		<div class="bg-gray-800 p-6 rounded shadow">
+			<h2 class="text-xl font-bold mb-2">Stadt Generator</h2>
+			<p>
+				Platzhalter
+			</p>
+		</div>
+
+		<div class="bg-gray-800 p-6 rounded shadow">
+			<h2 class="text-xl font-bold mb-2">Topographie Generator</h2>
+			<p>
+				Platzhalter
+			</p>
+		</div>
+
+		<div class="bg-gray-800 p-6 rounded shadow">
+			<h2 class="text-xl font-bold mb-2">Minispiele</h2>
+			<p>
+				Platzhalter
+			</p>
+		</div>
+	</section>
 </Project>

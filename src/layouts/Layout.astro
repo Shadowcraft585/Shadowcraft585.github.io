@@ -32,7 +32,7 @@ const { title, description } = Astro.props;
         <meta name="twitter:description" content={description} />
     </head>
     <body>
-        <img src={Background.src} alt="Background" class="fixed top-0 left-0 w-full h-full object-cover" />
+        <img src={Background.src} alt="Background" class="fixed top-0 left-0 w-full h-full object-cover pointer-events-none" />
         <slot />
     </body>
 </html>
