@@ -13,6 +13,11 @@ import Spitzhacke from '../../assets/spitzhacke.svg';
 .font-mc {
   font-family: 'Minecraft', sans-serif;
 }
+
+.front-image {
+  position: relative;
+  z-index: 10;
+}
 </style>
 
 <Project title='Kevin Ganske' description='Kevin Ganskes website'>
@@ -88,10 +93,7 @@ import Spitzhacke from '../../assets/spitzhacke.svg';
 	<section class="mt-8">
 		<h2 class="text-2xl font-bold text-green-400 mb-4 text-center font-mc">Zeitstrahl:  Zukunft des Projekts</h2>
 
-		<div class="relative left-1/2 right-1/2 mx-[-50vw] w-screen">
-			<img src={Zeitstrahl.src} alt="Zeitstrahl" class="w-full h-auto block" />
-			
-		</div>
+		<img src={Zeitstrahl.src} alt="Zeitstrahl" class="w-full h-auto block front-image" />
 
 		<div class="mt-6 flex flex-wrap justify-center gap-3 px-4">
 			<MilestoneButton title="Stadt Generierung" description="Platzhalter">Stadt Generierung</MilestoneButton>
