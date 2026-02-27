@@ -1,6 +1,7 @@
 ---
 import Project from '../../layouts/Project.astro';
 import Zeitstrahl from '../../assets/Zeitstrahl_neu.svg';
+import MilestoneButton from '../../components/MilestoneButton.astro';
 import GrasWuerfel from '../../assets/graswuerfel.svg';
 import Diamant from '../../assets/diamant.svg';
 import Spitzhacke from '../../assets/spitzhacke.svg';
@@ -16,11 +17,6 @@ import Spitzhacke from '../../assets/spitzhacke.svg';
 
 <Project title='Kevin Ganske' description='Kevin Ganskes website'>
 	<h1 class="text-green-500 text-3xl font-bold font-mc">Minecraft Generator</h1>
-	
-	<details class="mt-4">
-		<summary class="cursor-pointer text-lg text-blue-300 underline">Zukunft des Projekts</summary>
-		<img src={Zeitstrahl.src} alt="Zeitstrahl" class="w-460 mt-2 mx-auto relative z-10" />
-	</details>
 
 	<div class="mt-6 inline-block p-4 bg-gray-800 rounded border border-gray-600">
 		<p>
@@ -88,4 +84,56 @@ import Spitzhacke from '../../assets/spitzhacke.svg';
 			</div>
 		</div>
 	</section>
+
+	<section class="mt-8">
+		<h2 class="text-2xl font-bold text-green-400 mb-4 text-center font-mc">Zeitstrahl:  Zukunft des Projekts</h2>
+
+		<div class="relative left-1/2 right-1/2 mx-[-50vw] w-screen">
+			<img src={Zeitstrahl.src} alt="Zeitstrahl" class="w-full h-auto block" />
+			
+		</div>
+
+		<div class="mt-6 flex flex-wrap justify-center gap-3 px-4">
+			<MilestoneButton title="Stadt Generierung" description="Platzhalter">Stadt Generierung</MilestoneButton>
+			<MilestoneButton title="Topographie Generierung" description="Platzhalter">Topographie Generierung</MilestoneButton>
+			<MilestoneButton title="Zombie Survival Minigame" description="Platzhalter">Zombie Survival Minigame</MilestoneButton>
+			<MilestoneButton title="Monopoly Minigame" description="Platzhalter">Monopoly Minigame</MilestoneButton>
+			<MilestoneButton title="Hunger Games" description="Platzhalter">Hunger Games</MilestoneButton>
+			<MilestoneButton title="Mario Kart" description="Platzhalter">Mario Kart</MilestoneButton>
+			<MilestoneButton title="Generatoren optimieren" description="Platzhalter">Generatoren optimieren</MilestoneButton>
+			<MilestoneButton title="Minispiele optimieren" description="Platzhalter">Minispiele optimieren</MilestoneButton>
+		</div>
+	</section>
+
+	<div id="milestone-modal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50">
+		<div class="bg-gray-900 p-6 rounded max-w-lg w-full mx-4">
+			<button id="modal-close" class="float-right text-gray-400">✕</button>
+			<h3 id="modal-title" class="text-xl font-bold mb-2 text-green-400"></h3>
+			<p id="modal-body" class="text-gray-200"></p>
+		</div>
+	</div>
+
+	<script>
+	const modal = document.getElementById('milestone-modal')!;
+	const title = document.getElementById('modal-title')!;
+	const body = document.getElementById('modal-body')!;
+
+	document.getElementById('modal-close')!.addEventListener('click', () => {
+		modal.classList.replace('flex', 'hidden');
+	});
+
+	modal.addEventListener('click', (e) => {
+		if (e.target === modal) modal.classList.replace('flex', 'hidden');
+	});
+
+	document.querySelectorAll('[data-title]').forEach((button) => {
+		button.addEventListener('click', () => {
+		title.textContent = button.getAttribute('data-title');
+		body.textContent = button.getAttribute('data-description');
+		modal.classList.replace('hidden', 'flex');
+		});
+	});
+	</script>
+
+	<div class="h-16"></div>
 </Project>

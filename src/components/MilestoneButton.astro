@@ -1,0 +1,13 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+---
+
+<button
+  data-title={Astro.props.title}
+  data-description={Astro.props.description}
+  class={"px-4 py-2 bg-gray-800 text-green-400 font-bold rounded cursor-pointer border-2 border-green-500 shadow-lg hover:bg-green-600 hover:text-white hover:border-green-400 hover:shadow-green-500/50 hover:scale-105 transition-all"}>
+  <slot></slot>
+</button>
