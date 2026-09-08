@@ -53,67 +53,74 @@ import HoloGlobe from '../../assets/hologlobe.jpg';
 >
 
   <!-- HEADER -->
-  <section class="mb-10">
-    <div class="flex flex-col lg:flex-row gap-8 items-start">
 
-      <div class="flex-1">
-        <p class="text-blue-400 font-mono text-sm mb-2">
-          EMBEDDED SYSTEMS · SOMMERSEMESTER 2026
-        </p>
+<section class="mb-10">
 
-        <h1 class="text-blue-400 text-4xl md:text-5xl font-bold mb-4 glow-blue">
-          HoloGlobe
-        </h1>
+  <!-- Text -->
+  <div>
+    <p class="text-blue-400 font-mono text-sm mb-2">
+      EMBEDDED SYSTEMS · SOMMERSEMESTER 2026
+    </p>
 
-        <p class="text-xl text-gray-300 leading-relaxed max-w-3xl">
-          Eine rotierende LED-Kugel, die Flugzeuge in Echtzeit auf einer
-          dreidimensionalen Weltkarte visualisiert.
-        </p>
+    <h1 class="text-blue-400 text-4xl md:text-5xl font-bold mb-4 glow-blue">
+      HoloGlobe
+    </h1>
 
-        <p class="text-gray-400 mt-4 max-w-3xl leading-relaxed">
-          Im Team wurde ein bestehender LED-Globus zu einem interaktiven
-          ADS-B-Visualisierungssystem erweitert. Flugzeugdaten werden über
-          1090 MHz empfangen, verarbeitet und anschließend drahtlos an die
-          rotierende LED-Kugel übertragen.
-        </p>
+    <p class="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto text-center">
+      Eine rotierende LED-Kugel, die Flugzeuge in Echtzeit auf einer
+      dreidimensionalen Weltkarte visualisiert.
+    </p>
 
-        <div class="flex flex-wrap gap-2 mt-6">
-          <span class="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
-            Raspberry Pi 5
-          </span>
-          <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm">
-            Raspberry Pi Pico 2 W
-          </span>
-          <span class="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
-            Python
-          </span>
-          <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm">
-            MQTT
-          </span>
-          <span class="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
-            ADS-B
-          </span>
-        </div>
-      </div>
+    <p class="text-gray-400 mt-4 max-w-3xl leading-relaxed mx-auto text-center">
+      Im Team wurde ein bestehender LED-Globus zu einem interaktiven
+      ADS-B-Visualisierungssystem erweitert. Flugzeugdaten werden über
+      1090 MHz empfangen, verarbeitet und anschließend drahtlos an die
+      rotierende LED-Kugel übertragen.
+    </p>
 
-      <!-- HERO IMAGE -->
-      <div class="w-full lg:w-[42%]">
-        <div class="rounded-2xl overflow-hidden border border-blue-500/30 bg-gray-900 glow">
-          <Image
-            src={HoloGlobe}
-            alt="Der rotierende HoloGlobe mit leuchtenden LEDs"
-            class="w-full h-auto"
-            priority
-          />
-        </div>
+    <div class="flex flex-wrap gap-2 mt-6 mx-auto text-center justify-center">
+      <span class="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
+        Raspberry Pi 5
+      </span>
 
-        <p class="text-xs text-gray-500 mt-2 text-center">
-          Der fertige HoloGlobe während der Entwicklung
-        </p>
-      </div>
+      <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm">
+        Raspberry Pi Pico 2 W
+      </span>
 
+      <span class="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
+        Python
+      </span>
+
+      <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm">
+        MQTT
+      </span>
+
+      <span class="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm">
+        ADS-B
+      </span>
     </div>
-  </section>
+  </div>
+
+
+  <!-- HoloGlobe IMAGE -->
+  <div class="mt-8 flex flex-col items-center">
+
+    <div class="w-full max-w-2xl z-[9999] rounded-2xl overflow-hidden border border-blue-500/30 bg-gray-900 glow">
+      <Image
+        src={HoloGlobe}
+        alt="Der rotierende HoloGlobe mit leuchtenden LEDs"
+        class="w-full h-auto"
+        priority
+      />
+    </div>
+
+    <p class="text-xs text-gray-500 mt-2 text-center">
+      Der fertige HoloGlobe während der Entwicklung
+    </p>
+
+  </div>
+
+</section>
 
 
   <!-- PROJEKTÜBERSICHT -->
@@ -124,13 +131,13 @@ import HoloGlobe from '../../assets/hologlobe.jpg';
         Das Projekt
       </h2>
 
-      <p class="text-gray-300 leading-relaxed max-w-4xl">
+      <p class="text-gray-300 leading-relaxed max-w-4xl mx-auto text-center">
         Ziel des Projekts war es, einen vorhandenen rotierenden LED-Globus
         technisch weiterzuentwickeln. Statt einer statischen Darstellung
         sollte der Globus aktuelle Flugzeuge in seiner Umgebung anzeigen.
       </p>
 
-      <p class="text-gray-400 leading-relaxed max-w-4xl mt-4">
+      <p class="text-gray-400 leading-relaxed max-w-4xl mt-4 mx-auto text-center">
         Dafür mussten mehrere Systeme miteinander verbunden werden:
         Funkempfang, Datenverarbeitung, Weboberfläche, drahtlose Kommunikation,
         Mikrocontroller, Motorsteuerung, Positionssensorik und die
@@ -513,14 +520,14 @@ import HoloGlobe from '../../assets/hologlobe.jpg';
       Was ich aus dem Projekt mitgenommen habe
     </h2>
 
-    <p class="text-gray-300 leading-relaxed max-w-4xl">
+    <p class="text-gray-300 leading-relaxed max-w-4xl mx-auto text-center">
       Der HoloGlobe hat besonders gezeigt, wie stark Softwareentwicklung
       und Hardwareentwicklung bei einem Embedded-System voneinander
       abhängig sind. Änderungen an Motor, Sensorik oder LED-Timing wirken
       sich direkt auf die Software aus – und umgekehrt.
     </p>
 
-    <p class="text-gray-400 leading-relaxed max-w-4xl mt-4">
+    <p class="text-gray-400 leading-relaxed max-w-4xl mt-4 mx-auto text-center">
       Neben der eigentlichen Programmierung stand deshalb vor allem das
       systematische Messen, Debuggen und Zusammenspiel verschiedener
       Komponenten im Mittelpunkt.
