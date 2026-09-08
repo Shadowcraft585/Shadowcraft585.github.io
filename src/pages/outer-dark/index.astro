@@ -1,0 +1,717 @@
+---
+import Project from '../../layouts/Project.astro';
+---
+
+<style>
+  .space-bg {
+    background:
+      radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.12), transparent 30%),
+      radial-gradient(circle at 80% 30%, rgba(168, 85, 247, 0.10), transparent 30%),
+      radial-gradient(circle at 50% 80%, rgba(59, 130, 246, 0.08), transparent 35%);
+  }
+
+  .star-grid {
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px),
+      radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px);
+    background-size: 80px 80px, 130px 130px;
+    background-position: 10px 20px, 50px 70px;
+  }
+
+  .space-glow {
+    box-shadow:
+      0 0 30px rgba(99, 102, 241, 0.12),
+      0 0 80px rgba(168, 85, 247, 0.06);
+  }
+
+  .planet {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 30% 25%, #818cf8, #4f46e5 40%, #1e1b4b 75%);
+    box-shadow:
+      inset -20px -15px 30px rgba(0, 0, 0, 0.55),
+      0 0 35px rgba(99, 102, 241, 0.25);
+  }
+
+  .planet-small {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 35% 30%, #d8b4fe, #9333ea 55%, #3b0764);
+    box-shadow:
+      inset -12px -10px 15px rgba(0, 0, 0, 0.5),
+      0 0 20px rgba(168, 85, 247, 0.2);
+  }
+
+  .orbit {
+    border: 1px solid rgba(129, 140, 248, 0.15);
+    border-radius: 50%;
+  }
+
+  .code-line {
+    font-family: monospace;
+    color: #9ca3af;
+  }
+
+  .code-keyword {
+    color: #a78bfa;
+  }
+
+  .code-type {
+    color: #67e8f9;
+  }
+
+  .code-value {
+    color: #86efac;
+  }
+
+  .timeline-dot {
+    box-shadow: 0 0 12px rgba(129, 140, 248, 0.5);
+  }
+</style>
+
+
+<Project
+  title="Kevin Ganske"
+  description="Kevin Ganskes Website"
+>
+
+  <!-- HEADER -->
+  <section class="relative overflow-hidden rounded-3xl mb-12 space-bg star-grid border border-indigo-500/20">
+
+    <div class="relative p-8 md:p-12">
+
+      <p class="text-indigo-400 font-mono text-sm mb-3">
+        EIGENENTWICKLUNG · C# · UNITY
+      </p>
+
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-5">
+        Outer Dark
+      </h1>
+
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed">
+        Ein rundenbasiertes 2D-Strategiespiel im Weltraum –
+        mit prozedural generierten Sonnensystemen.
+      </p>
+
+      <p class="text-gray-400 max-w-3xl leading-relaxed mt-5">
+        Outer Dark ist eine eigenständig entwickelte Sci-Fi-Strategiespiel-
+        Idee, die ich mit Unity und C# umsetze. Der aktuelle Schwerpunkt
+        liegt auf der technischen Grundlage: prozedurale Kartengenerierung,
+        ein 2D-Tile-System, Rendering und Interaktion.
+      </p>
+
+      <div class="flex flex-wrap gap-2 mt-7">
+
+        <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-sm">
+          C#
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-sm">
+          Unity 6
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-sm">
+          2D
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-sm">
+          Procedural Generation
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-sm">
+          Git
+        </span>
+
+      </div>
+
+      <!-- DEKORATIVES SONNENSYSTEM -->
+      <div class="hidden lg:block absolute right-12 top-12 w-64 h-64">
+
+        <div class="orbit absolute inset-0"></div>
+        <div class="orbit absolute inset-8"></div>
+        <div class="orbit absolute inset-16"></div>
+
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+                    w-12 h-12 rounded-full
+                    bg-yellow-300
+                    shadow-[0_0_35px_rgba(253,224,71,0.5)]">
+        </div>
+
+        <div class="planet-small absolute right-5 top-8"></div>
+
+        <div class="w-4 h-4 rounded-full bg-gray-400 absolute left-5 bottom-14"></div>
+
+        <div class="w-3 h-3 rounded-full bg-purple-300 absolute right-20 bottom-4"></div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJEKT -->
+  <section class="mb-12">
+
+    <h2 class="text-2xl font-bold text-white mb-6">
+      Das Projekt
+    </h2>
+
+    <div class="grid lg:grid-cols-2 gap-6">
+
+      <div class="rounded-2xl bg-gray-900 border border-indigo-500/20 p-7 space-glow">
+
+        <h3 class="text-xl font-bold text-indigo-300 mb-4">
+          Spielidee
+        </h3>
+
+        <p class="text-gray-300 leading-relaxed">
+          Outer Dark ist als rundenbasiertes Strategiespiel im Weltraum
+          konzipiert. Der Spieler bewegt sich durch prozedural generierte
+          Sonnensysteme und soll Ressourcen verwalten, Gebiete kontrollieren
+          und mit unterschiedlichen Fraktionen interagieren.
+        </p>
+
+        <p class="text-gray-400 leading-relaxed mt-4">
+          Die Spielidee ist langfristig angelegt. Deshalb entwickle ich
+          zunächst die technischen Systeme, auf denen die späteren
+          Spielmechaniken aufbauen können.
+        </p>
+
+      </div>
+
+
+      <div class="rounded-2xl bg-gray-900 border border-purple-500/20 p-7 space-glow">
+
+        <h3 class="text-xl font-bold text-purple-300 mb-4">
+          Aktueller Entwicklungsstand
+        </h3>
+
+        <p class="text-gray-300 leading-relaxed">
+          Bereits umgesetzt sind die prozedurale Generierung eines
+          Sonnensystems, die Darstellung auf einem 2D-Tile-System,
+          Kamerasteuerung, Zoom und die Interaktion mit einzelnen Tiles.
+        </p>
+
+        <p class="text-gray-400 leading-relaxed mt-4">
+          Weitere Systeme wie Fraktionen, Ressourcen, Einheiten und
+          umfangreiche Kampfsysteme gehören zur geplanten Weiterentwicklung.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- GENERATOR -->
+  <section class="mb-12">
+
+    <h2 class="text-2xl font-bold text-white mb-6">
+      Prozedurale Sonnensysteme
+    </h2>
+
+    <div class="rounded-2xl overflow-hidden border border-indigo-500/20 bg-gray-950">
+
+      <div class="grid lg:grid-cols-2">
+
+        <!-- VISUALISIERUNG -->
+        <div class="relative min-h-[380px] star-grid overflow-hidden flex items-center justify-center">
+
+          <div class="absolute w-[300px] h-[300px] rounded-full border border-indigo-500/10"></div>
+          <div class="absolute w-[220px] h-[220px] rounded-full border border-indigo-500/15"></div>
+          <div class="absolute w-[140px] h-[140px] rounded-full border border-indigo-500/20"></div>
+
+          <div class="absolute w-20 h-20 rounded-full
+                      bg-yellow-300
+                      shadow-[0_0_50px_rgba(253,224,71,0.45)]">
+          </div>
+
+          <div class="planet-small absolute left-[22%] top-[30%]"></div>
+
+          <div class="w-8 h-8 rounded-full bg-gray-400
+                      absolute right-[22%] top-[25%]
+                      shadow-[0_0_15px_rgba(156,163,175,0.25)]">
+          </div>
+
+          <div class="w-12 h-12 rounded-full
+                      bg-red-900 border border-red-500/40
+                      absolute right-[25%] bottom-[22%]">
+          </div>
+
+          <div class="w-5 h-5 rounded-full
+                      bg-cyan-300
+                      absolute left-[25%] bottom-[25%]">
+          </div>
+
+        </div>
+
+
+        <!-- BESCHREIBUNG -->
+        <div class="p-7 md:p-9">
+
+          <h3 class="text-xl font-bold text-white mb-4">
+            Seed-basierte Generierung
+          </h3>
+
+          <p class="text-gray-400 leading-relaxed mb-5">
+            Jedes Sonnensystem wird anhand eines Seeds erzeugt. Dadurch
+            können zufällige Systeme erstellt und gleichzeitig reproduziert
+            werden.
+          </p>
+
+          <div class="space-y-3">
+
+            <div class="flex gap-3">
+              <span class="text-indigo-400">01</span>
+              <p class="text-gray-300">
+                Sonne und Himmelskörper erzeugen
+              </p>
+            </div>
+
+            <div class="flex gap-3">
+              <span class="text-indigo-400">02</span>
+              <p class="text-gray-300">
+                Größen und Positionen bestimmen
+              </p>
+            </div>
+
+            <div class="flex gap-3">
+              <span class="text-indigo-400">03</span>
+              <p class="text-gray-300">
+                Überlappungen überprüfen
+              </p>
+            </div>
+
+            <div class="flex gap-3">
+              <span class="text-indigo-400">04</span>
+              <p class="text-gray-300">
+                Tiles und Formen generieren
+              </p>
+            </div>
+
+            <div class="flex gap-3">
+              <span class="text-indigo-400">05</span>
+              <p class="text-gray-300">
+                Daten vom Rendering trennen
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- TECHNISCHE SYSTEME -->
+  <section class="mb-12">
+
+    <h2 class="text-2xl font-bold text-white mb-6">
+      Technische Systeme
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-5">
+
+      <div class="rounded-2xl bg-gray-900 border border-indigo-500/20 p-6">
+
+        <div class="text-indigo-400 text-3xl mb-4">
+          ◈
+        </div>
+
+        <h3 class="text-xl font-bold text-white mb-3">
+          Tile-System
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed">
+          Das Sonnensystem wird als 2D-Raster aufgebaut. Planeten und andere
+          Himmelskörper bestehen aus einzelnen Tiles, wodurch spätere
+          Spielmechaniken auf einer einheitlichen Struktur aufbauen können.
+        </p>
+
+      </div>
+
+
+      <div class="rounded-2xl bg-gray-900 border border-purple-500/20 p-6">
+
+        <div class="text-purple-400 text-3xl mb-4">
+          ◎
+        </div>
+
+        <h3 class="text-xl font-bold text-white mb-3">
+          Rendering
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed">
+          Die Daten des generierten Sonnensystems werden getrennt von
+          deren Darstellung behandelt. Dadurch können Generierung und
+          Rendering unabhängig voneinander weiterentwickelt werden.
+        </p>
+
+      </div>
+
+
+      <div class="rounded-2xl bg-gray-900 border border-indigo-500/20 p-6">
+
+        <div class="text-indigo-400 text-3xl mb-4">
+          ⌖
+        </div>
+
+        <h3 class="text-xl font-bold text-white mb-3">
+          Kamera & Input
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed">
+          Die Karte kann über WASD bewegt und mit dem Mausrad gezoomt
+          werden. Die Bewegung wird dabei an die aktuelle Zoomstufe
+          angepasst.
+        </p>
+
+      </div>
+
+
+      <div class="rounded-2xl bg-gray-900 border border-purple-500/20 p-6">
+
+        <div class="text-purple-400 text-3xl mb-4">
+          +
+        </div>
+
+        <h3 class="text-xl font-bold text-white mb-3">
+          Tile-Interaktion
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed">
+          Einzelne Tiles können ausgewählt werden. Das System hebt das
+          ausgewählte Feld hervor und stellt zusätzliche Informationen
+          über das Tile bereit.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CODE / ARCHITEKTUR -->
+  <section class="mb-12">
+
+    <h2 class="text-2xl font-bold text-white mb-6">
+      Code-Struktur
+    </h2>
+
+    <div class="rounded-2xl bg-gray-950 border border-indigo-500/20 overflow-hidden">
+
+      <div class="p-5 border-b border-gray-800 flex items-center gap-2">
+        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+
+        <span class="ml-3 text-gray-500 text-sm font-mono">
+          Assets/Scripts/Map/
+        </span>
+      </div>
+
+      <div class="p-6 font-mono text-sm leading-8 overflow-x-auto">
+
+        <div class="code-line">
+          <span class="code-type">SolarSystemGenerator.cs</span>
+          <span class="text-gray-600">
+            // Generierung
+          </span>
+        </div>
+
+        <div class="code-line">
+          <span class="code-type">SolarSystemRenderer.cs</span>
+          <span class="text-gray-600">
+            // Darstellung
+          </span>
+        </div>
+
+        <div class="code-line">
+          <span class="code-type">SolarSystem.cs</span>
+          <span class="text-gray-600">
+            // Datenmodell
+          </span>
+        </div>
+
+        <div class="code-line">
+          <span class="code-type">MapInteract.cs</span>
+          <span class="text-gray-600">
+            // Tile-Interaktion
+          </span>
+        </div>
+
+        <div class="code-line">
+          <span class="code-type">CameraMovement.cs</span>
+          <span class="text-gray-600">
+            // Kamera
+          </span>
+        </div>
+
+        <div class="code-line">
+          <span class="code-type">GameManager.cs</span>
+          <span class="text-gray-600">
+            // Spielverwaltung
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- DATEN / RENDERING -->
+  <section class="mb-12">
+
+    <h2 class="text-2xl font-bold text-white mb-6">
+      Architekturprinzip
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-4 items-stretch">
+
+      <div class="rounded-xl bg-indigo-500/5 border border-indigo-500/20 p-6 text-center">
+        <div class="text-indigo-300 font-bold text-lg">
+          Daten
+        </div>
+
+        <p class="text-gray-500 text-sm mt-2">
+          Sonnensystem<br />
+          Planeten<br />
+          Tiles<br />
+          Positionen
+        </p>
+      </div>
+
+      <div class="flex items-center justify-center text-indigo-400 text-3xl">
+        →
+      </div>
+
+      <div class="rounded-xl bg-purple-500/5 border border-purple-500/20 p-6 text-center">
+        <div class="text-purple-300 font-bold text-lg">
+          Rendering
+        </div>
+
+        <p class="text-gray-500 text-sm mt-2">
+          Sprites<br />
+          Kamera<br />
+          Highlighting<br />
+          Interaktion
+        </p>
+      </div>
+
+    </div>
+
+    <p class="text-gray-400 mt-6 max-w-4xl leading-relaxed">
+      Die Trennung von Daten und Darstellung erleichtert die Erweiterung
+      des Spiels. Die Generierungslogik muss beispielsweise nicht direkt
+      wissen, wie ein Planet später als Sprite dargestellt wird.
+    </p>
+
+  </section>
+
+
+  <!-- TECHNOLOGIEN -->
+  <section class="mb-12">
+
+    <h2 class="text-2xl font-bold text-white mb-6">
+      Technologien & Methoden
+    </h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      <div class="rounded-xl bg-indigo-500/5 border border-indigo-500/20 p-5">
+        <h3 class="font-bold text-indigo-300 mb-3">
+          Game Engine
+        </h3>
+
+        <p class="text-gray-400 text-sm leading-7">
+          Unity 6 · 2D URP
+        </p>
+      </div>
+
+
+      <div class="rounded-xl bg-purple-500/5 border border-purple-500/20 p-5">
+        <h3 class="font-bold text-purple-300 mb-3">
+          Programmierung
+        </h3>
+
+        <p class="text-gray-400 text-sm leading-7">
+          C# · objektorientierte Programmierung
+        </p>
+      </div>
+
+
+      <div class="rounded-xl bg-indigo-500/5 border border-indigo-500/20 p-5">
+        <h3 class="font-bold text-indigo-300 mb-3">
+          Map-System
+        </h3>
+
+        <p class="text-gray-400 text-sm leading-7">
+          2D Tiles · Raster · prozedurale Generierung
+        </p>
+      </div>
+
+
+      <div class="rounded-xl bg-purple-500/5 border border-purple-500/20 p-5">
+        <h3 class="font-bold text-purple-300 mb-3">
+          Input
+        </h3>
+
+        <p class="text-gray-400 text-sm leading-7">
+          Unity Input System · Keyboard · Mouse
+        </p>
+      </div>
+
+
+      <div class="rounded-xl bg-indigo-500/5 border border-indigo-500/20 p-5">
+        <h3 class="font-bold text-indigo-300 mb-3">
+          Architektur
+        </h3>
+
+        <p class="text-gray-400 text-sm leading-7">
+          Daten/Rendering-Trennung · Komponentenstruktur
+        </p>
+      </div>
+
+
+      <div class="rounded-xl bg-purple-500/5 border border-purple-500/20 p-5">
+        <h3 class="font-bold text-purple-300 mb-3">
+          Entwicklung
+        </h3>
+
+        <p class="text-gray-400 text-sm leading-7">
+          Git · GitHub · eigenständige Entwicklung
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ENTWICKLUNG -->
+  <section class="mb-12">
+
+    <h2 class="text-2xl font-bold text-white mb-6">
+      Entwicklung
+    </h2>
+
+    <div class="relative border-l-2 border-indigo-500/30 ml-4 pl-8 space-y-9">
+
+      <div class="relative">
+
+        <span class="timeline-dot absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-indigo-500 border-4 border-gray-950"></span>
+
+        <p class="text-indigo-400 font-mono text-sm">
+          01 · Grundlagen
+        </p>
+
+        <h3 class="text-lg font-bold text-white">
+          Unity-Projekt & Tile-System
+        </h3>
+
+        <p class="text-gray-400 mt-1">
+          Aufbau des 2D-Projekts und Entwicklung einer Grundlage für
+          kachelbasierte Karten.
+        </p>
+
+      </div>
+
+
+      <div class="relative">
+
+        <span class="timeline-dot absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-purple-500 border-4 border-gray-950"></span>
+
+        <p class="text-purple-400 font-mono text-sm">
+          02 · Generierung
+        </p>
+
+        <h3 class="text-lg font-bold text-white">
+          Prozedurale Sonnensysteme
+        </h3>
+
+        <p class="text-gray-400 mt-1">
+          Entwicklung eines Seed-basierten Generators für Sonnen,
+          Planeten und Asteroiden.
+        </p>
+
+      </div>
+
+
+      <div class="relative">
+
+        <span class="timeline-dot absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-indigo-500 border-4 border-gray-950"></span>
+
+        <p class="text-indigo-400 font-mono text-sm">
+          03 · Interaktion
+        </p>
+
+        <h3 class="text-lg font-bold text-white">
+          Kamera & Tile-Auswahl
+        </h3>
+
+        <p class="text-gray-400 mt-1">
+          Kamera-Steuerung, Zoom und Interaktion mit einzelnen Tiles
+          wurden ergänzt.
+        </p>
+
+      </div>
+
+
+      <div class="relative">
+
+        <span class="timeline-dot absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-purple-500 border-4 border-gray-950"></span>
+
+        <p class="text-purple-400 font-mono text-sm">
+          04 · Architektur
+        </p>
+
+        <h3 class="text-lg font-bold text-white">
+          Trennung von Daten & Darstellung
+        </h3>
+
+        <p class="text-gray-400 mt-1">
+          Die Systemstruktur wurde so aufgebaut, dass Generierung,
+          Datenmodell und Rendering getrennt voneinander arbeiten.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABSCHLUSS -->
+  <section class="rounded-2xl p-8 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 border border-indigo-500/20">
+
+    <h2 class="text-2xl font-bold text-white mb-4">
+      Was ich aus dem Projekt mitgenommen habe
+    </h2>
+
+    <p class="text-gray-300 leading-relaxed max-w-4xl">
+      Outer Dark ist für mich vor allem ein langfristiges Softwareprojekt,
+      bei dem ich die Architektur selbst planen und schrittweise erweitern
+      kann. Dadurch liegt der Fokus nicht nur auf der eigentlichen
+      Spielentwicklung, sondern auch auf sauberer Strukturierung und
+      langfristig erweiterbaren Systemen.
+    </p>
+
+    <p class="text-gray-400 leading-relaxed max-w-4xl mt-4">
+      Besonders wichtig ist dabei die Trennung der verschiedenen
+      Verantwortlichkeiten. Die technische Grundlage soll später ermöglichen,
+      komplexere Spielmechaniken hinzuzufügen, ohne die bestehenden Systeme
+      grundlegend neu schreiben zu müssen.
+    </p>
+
+  </section>
+
+</Project>

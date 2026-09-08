@@ -5,11 +5,32 @@ import Block from '../assets/graswuerfel.svg';
 ---
 
 <Layout title="Kevin Ganske" description="Kevin Ganske's website">
-	<div class="flex items-center justify-center gap-2">
-		<h1 class="text-blue-400 font-bold text-3xl">Minecraft Generator</h1>
+
+	<div class="flex items-center justify-center gap-2 mb-6">
+		<h1 class="text-blue-400 font-bold text-3xl">Meine Projekte</h1>
 		<img src={Block.src} alt="Minecraft Block" class="w-8 mt-1" />
 	</div>
-	<Project title="Minecraft Generator" href="/minecraft">
-		<p>Ein Generator für Minecraft Welten, Strukturen und mehr.</p>
-	</Project>
+
+	<div class="grid md:grid-cols-3 gap-4">
+
+		<Project title="Minecraft Generator" href="/minecraft">
+			<p>Ein Generator für Minecraft Welten, Strukturen und mehr.</p>
+		</Project>
+
+		<Project title="HoloGlobe" href="/hologlobe">
+			<p>
+				Ein rotierender LED-Globus zur Visualisierung von
+				Flugzeugdaten in Echtzeit.
+			</p>
+		</Project>
+
+		<Project title="Outer Dark" href="/outer-dark">
+			<p>
+				Ein rundenbasiertes 2D-Strategiespiel im Weltraum
+				mit prozedural generierten Sonnensystemen.
+			</p>
+		</Project>
+
+	</div>
+
 </Layout>
