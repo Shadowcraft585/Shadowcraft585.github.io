@@ -6,31 +6,399 @@ import Block from '../assets/graswuerfel.svg';
 
 <Layout title="Kevin Ganske" description="Kevin Ganske's website">
 
-	<div class="flex items-center justify-center gap-2 mb-6">
-		<h1 class="text-blue-400 font-bold text-3xl">Meine Projekte</h1>
-		<img src={Block.src} alt="Minecraft Block" class="w-8 mt-1" />
-	</div>
+	<style>
+		.hero-glow {
+			background:
+				radial-gradient(
+					circle at 50% 0%,
+					rgba(59, 130, 246, 0.15),
+					transparent 55%
+				);
+		}
 
-	<div class="grid md:grid-cols-3 gap-4">
+		.project-card {
+			transition:
+				transform 0.25s ease,
+				border-color 0.25s ease,
+				box-shadow 0.25s ease;
+		}
 
-		<Project title="Minecraft Generator" href="/minecraft">
-			<p>Ein Generator für Minecraft Welten, Strukturen und mehr.</p>
-		</Project>
+		.project-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+		}
+	</style>
 
-		<Project title="HoloGlobe" href="/hologlobe">
-			<p>
-				Ein rotierender LED-Globus zur Visualisierung von
-				Flugzeugdaten in Echtzeit.
+
+	<!-- HERO -->
+	<section class="hero-glow text-center pt-20 pb-16">
+
+		<p class="text-blue-400 font-mono text-sm tracking-widest mb-4">
+			SOFTWARE ENGINEERING · B.Sc.
+		</p>
+
+		<h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+			Kevin Ganske
+		</h1>
+
+		<p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+			Software Engineering Student & Entwickler
+		</p>
+
+		<p class="text-gray-400 max-w-xl mx-auto mt-5 leading-relaxed">
+			Ich entwickle Softwareprojekte mit besonderem Interesse
+			an Backend-Systemen, Embedded Systems, Game Development
+			und der Verbindung von Software und Hardware.
+		</p>
+
+
+		<!-- BUTTONS -->
+		<div class="flex flex-wrap justify-center gap-4 mt-8">
+
+			<a
+				href="#projekte"
+				class="bg-blue-500 hover:bg-blue-600 text-white font-semibold
+				       px-6 py-3 rounded-lg transition shadow-lg shadow-blue-500/20"
+			>
+				Meine Projekte
+			</a>
+
+			<a
+				href="https://github.com/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="border border-gray-600 hover:border-blue-400
+				       text-gray-300 hover:text-white
+				       px-6 py-3 rounded-lg transition"
+			>
+				GitHub
+			</a>
+
+		</div>
+
+	</section>
+
+
+	<!-- TRENNER -->
+	<div class="max-w-5xl mx-auto border-t border-gray-800"></div>
+
+
+	<!-- PROJEKTE -->
+	<section id="projekte" class="max-w-6xl mx-auto py-16">
+
+		<div class="text-center mb-10">
+
+			<p class="text-blue-400 font-mono text-sm mb-2">
+				PROJECTS
 			</p>
-		</Project>
 
-		<Project title="Outer Dark" href="/outer-dark">
-			<p>
-				Ein rundenbasiertes 2D-Strategiespiel im Weltraum
-				mit prozedural generierten Sonnensystemen.
+			<h2 class="text-3xl font-bold text-white">
+				Ausgewählte Projekte
+			</h2>
+
+			<p class="text-gray-400 mt-3">
+				Eine Auswahl meiner technischen und kreativen Projekte.
 			</p>
-		</Project>
 
-	</div>
+		</div>
+
+
+		<div class="grid md:grid-cols-3 gap-6">
+
+			<!-- MINECRAFT -->
+			<div
+				class="project-card rounded-2xl border border-green-500/20
+				       bg-gray-900/70 overflow-hidden"
+			>
+
+				<div class="h-2 bg-green-500"></div>
+
+				<div class="p-6">
+
+					<div class="flex items-center gap-3 mb-5">
+
+						<img
+							src={Block.src}
+							alt="Minecraft Block"
+							class="w-10"
+						/>
+
+						<h3 class="text-xl font-bold text-white">
+							Minecraft Generator
+						</h3>
+
+					</div>
+
+					<p class="text-gray-400 leading-relaxed mb-6">
+						Ein Generator für Minecraft-Welten, Strukturen
+						und mehrere eigene Minispiele.
+					</p>
+
+					<div class="flex flex-wrap gap-2 mb-6">
+
+						<span class="text-xs px-2 py-1 rounded bg-green-500/10 text-green-300">
+							Java
+						</span>
+
+						<span class="text-xs px-2 py-1 rounded bg-green-500/10 text-green-300">
+							Paper
+						</span>
+
+						<span class="text-xs px-2 py-1 rounded bg-green-500/10 text-green-300">
+							APIs
+						</span>
+
+					</div>
+
+					<a
+						href="/minecraft"
+						class="text-green-400 hover:text-green-300 font-semibold"
+					>
+						Projekt ansehen →
+					</a>
+
+				</div>
+			</div>
+
+
+			<!-- HOLOGLOBE -->
+			<div
+				class="project-card rounded-2xl border border-blue-500/20
+				       bg-gray-900/70 overflow-hidden"
+			>
+
+				<div class="h-2 bg-blue-500"></div>
+
+				<div class="p-6">
+
+					<div class="flex items-center gap-3 mb-5">
+
+						<div
+							class="w-10 h-10 rounded-full
+							       bg-blue-500/10 border border-blue-500/30
+							       flex items-center justify-center
+							       text-blue-400 text-xl"
+						>
+							◎
+						</div>
+
+						<h3 class="text-xl font-bold text-white">
+							HoloGlobe
+						</h3>
+
+					</div>
+
+					<p class="text-gray-400 leading-relaxed mb-6">
+						Ein rotierender LED-Globus zur Visualisierung
+						von Flugzeugdaten in Echtzeit.
+					</p>
+
+					<div class="flex flex-wrap gap-2 mb-6">
+
+						<span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-300">
+							ADS-B
+						</span>
+
+						<span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-300">
+							MicroPython
+						</span>
+
+						<span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-300">
+							MQTT
+						</span>
+
+						<span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-300">
+							Embedded
+						</span>
+
+					</div>
+
+					<a
+						href="/hologlobe"
+						class="text-blue-400 hover:text-blue-300 font-semibold"
+					>
+						Projekt ansehen →
+					</a>
+
+				</div>
+			</div>
+
+
+			<!-- OUTER DARK -->
+			<div
+				class="project-card rounded-2xl border border-purple-500/20
+				       bg-gray-900/70 overflow-hidden"
+			>
+
+				<div class="h-2 bg-purple-500"></div>
+
+				<div class="p-6">
+
+					<div class="flex items-center gap-3 mb-5">
+
+						<div
+							class="w-10 h-10 rounded-full
+							       bg-purple-500/10 border border-purple-500/30
+							       flex items-center justify-center
+							       text-purple-400 text-xl"
+						>
+							✦
+						</div>
+
+						<h3 class="text-xl font-bold text-white">
+							Outer Dark
+						</h3>
+
+					</div>
+
+					<p class="text-gray-400 leading-relaxed mb-6">
+						Ein rundenbasiertes 2D-Strategiespiel im Weltraum
+						mit prozedural generierten Sonnensystemen.
+					</p>
+
+					<div class="flex flex-wrap gap-2 mb-6">
+
+						<span class="text-xs px-2 py-1 rounded bg-purple-500/10 text-purple-300">
+							C#
+						</span>
+
+						<span class="text-xs px-2 py-1 rounded bg-purple-500/10 text-purple-300">
+							Unity
+						</span>
+
+						<span class="text-xs px-2 py-1 rounded bg-purple-500/10 text-purple-300">
+							2D
+						</span>
+
+						<span class="text-xs px-2 py-1 rounded bg-purple-500/10 text-purple-300">
+							Procedural
+						</span>
+
+					</div>
+
+					<a
+						href="/outer-dark"
+						class="text-purple-400 hover:text-purple-300 font-semibold"
+					>
+						Projekt ansehen →
+					</a>
+
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+
+	<!-- TECHNOLOGIEN -->
+	<section class="max-w-5xl mx-auto py-12">
+
+		<div class="text-center mb-8">
+
+			<p class="text-blue-400 font-mono text-sm mb-2">
+				TECH STACK
+			</p>
+
+			<h2 class="text-3xl font-bold text-white">
+				Technologien
+			</h2>
+
+		</div>
+
+
+		<div class="flex flex-wrap justify-center gap-3">
+
+			<span class="px-4 py-2 rounded-full bg-gray-900 border border-gray-700 text-gray-300">
+				Java
+			</span>
+
+			<span class="px-4 py-2 rounded-full bg-gray-900 border border-gray-700 text-gray-300">
+				TypeScript
+			</span>
+
+			<span class="px-4 py-2 rounded-full bg-gray-900 border border-gray-700 text-gray-300">
+				C#
+			</span>
+
+			<span class="px-4 py-2 rounded-full bg-gray-900 border border-gray-700 text-gray-300">
+				Next.js
+			</span>
+
+			<span class="px-4 py-2 rounded-full bg-gray-900 border border-gray-700 text-gray-300">
+				React
+			</span>
+
+			<span class="px-4 py-2 rounded-full bg-gray-900 border border-gray-700 text-gray-300">
+				GraphQL
+			</span>
+
+			<span class="px-4 py-2 rounded-full bg-gray-900 border border-gray-700 text-gray-300">
+				Docker
+			</span>
+
+			<span class="px-4 py-2 rounded-full bg-gray-900 border border-gray-700 text-gray-300">
+				Git
+			</span>
+
+			<span class="px-4 py-2 rounded-full bg-gray-900 border border-gray-700 text-gray-300">
+				Unity
+			</span>
+
+			<span class="px-4 py-2 rounded-full bg-gray-900 border border-gray-700 text-gray-300">
+				Raspberry Pi
+			</span>
+
+			<span class="px-4 py-2 rounded-full bg-gray-900 border border-gray-700 text-gray-300">
+				MQTT
+			</span>
+
+		</div>
+
+	</section>
+
+
+	<!-- FOOTER / KONTAKT -->
+	<section class="max-w-5xl mx-auto py-16 text-center">
+
+		<div class="border-t border-gray-800 pt-12">
+
+			<h2 class="text-2xl font-bold text-white">
+				Interesse an meinen Projekten?
+			</h2>
+
+			<p class="text-gray-400 mt-3 mb-6">
+				Mehr Code und Projekte findest du auf meinem GitHub.
+			</p>
+
+			<a
+				href="https://github.com/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-block bg-blue-500 hover:bg-blue-600
+				       text-white font-semibold px-6 py-3
+				       rounded-lg transition"
+			>
+				GitHub ansehen
+			</a>
+
+			<p class="text-gray-400 mt-3 mb-6">
+				Schaue auch auf meinem LinkedIn vorbei 
+			</p>
+
+			<a
+				href="https://www.linkedin.com/in/kevin-ganske/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-block bg-blue-500 hover:bg-blue-600
+				       text-white font-semibold px-6 py-3
+				       rounded-lg transition"
+			>
+				LinkedIn ansehen
+			</a>
+
+		</div>
+
+	</section>
 
 </Layout>
