@@ -106,65 +106,65 @@ import Block from '../assets/graswuerfel.svg';
 		<div class="grid md:grid-cols-3 gap-6">
 
 			<!-- MINECRAFT -->
-			<div
-				class="project-card rounded-2xl border border-green-500/20
-				       bg-gray-900/70 overflow-hidden"
+			<a
+			href="/minecraft"
+			class="project-card block rounded-2xl border border-green-500/20
+					bg-gray-900/70 overflow-hidden
+					hover:border-green-500/50 transition-colors cursor-pointer"
 			>
 
-				<div class="h-2 bg-green-500"></div>
+			<div class="h-2 bg-green-500"></div>
 
-				<div class="p-6">
+			<div class="p-6">
 
-					<div class="flex items-center gap-3 mb-5">
+				<div class="flex items-center gap-3 mb-5">
+				<img
+					src={Block.src}
+					alt="Minecraft Block"
+					class="w-10"
+				/>
 
-						<img
-							src={Block.src}
-							alt="Minecraft Block"
-							class="w-10"
-						/>
+				<h3 class="text-xl font-bold text-white">
+					Minecraft Generator
+				</h3>
+				</div>
 
-						<h3 class="text-xl font-bold text-white">
-							Minecraft Generator
-						</h3>
+				<p class="text-gray-400 leading-relaxed mb-6">
+				Ein Generator für Minecraft-Welten, Strukturen
+				und mehrere eigene Minispiele.
+				</p>
 
-					</div>
+				<div class="flex flex-wrap gap-2">
 
-					<p class="text-gray-400 leading-relaxed mb-6">
-						Ein Generator für Minecraft-Welten, Strukturen
-						und mehrere eigene Minispiele.
-					</p>
+				<span class="text-xs px-2 py-1 rounded bg-green-500/10 text-green-300">
+					Java
+				</span>
 
-					<div class="flex flex-wrap gap-2 mb-6">
+				<span class="text-xs px-2 py-1 rounded bg-green-500/10 text-green-300">
+					Paper
+				</span>
 
-						<span class="text-xs px-2 py-1 rounded bg-green-500/10 text-green-300">
-							Java
-						</span>
-
-						<span class="text-xs px-2 py-1 rounded bg-green-500/10 text-green-300">
-							Paper
-						</span>
-
-						<span class="text-xs px-2 py-1 rounded bg-green-500/10 text-green-300">
-							APIs
-						</span>
-
-					</div>
-
-					<a
-						href="/minecraft"
-						class="text-green-400 hover:text-green-300 font-semibold"
-					>
-						Projekt ansehen →
-					</a>
+				<span class="text-xs px-2 py-1 rounded bg-green-500/10 text-green-300">
+					APIs
+				</span>
 
 				</div>
+
+				<div class="text-green-400 font-semibold mt-6">
+						Projekt ansehen →
+				</div>
+
+
 			</div>
+			</a>
 
 
 			<!-- HOLOGLOBE -->
-			<div
-				class="project-card rounded-2xl border border-blue-500/20
-				       bg-gray-900/70 overflow-hidden"
+			<a
+			href="/hologlobe"
+			class="project-card block rounded-2xl border border-blue-500/20
+					bg-gray-900/70 overflow-hidden
+					hover:border-blue-500/50 transition-colors cursor-pointer"
 			>
 
 				<div class="h-2 bg-blue-500"></div>
@@ -213,21 +213,20 @@ import Block from '../assets/graswuerfel.svg';
 
 					</div>
 
-					<a
-						href="/hologlobe"
-						class="text-blue-400 hover:text-blue-300 font-semibold"
-					>
+					<div class="text-blue-400 font-semibold mt-6">
 						Projekt ansehen →
-					</a>
+					</div>
 
 				</div>
-			</div>
+			</a>
 
 
 			<!-- OUTER DARK -->
-			<div
-				class="project-card rounded-2xl border border-purple-500/20
-				       bg-gray-900/70 overflow-hidden"
+			<a
+			href="/outer-dark"
+			class="project-card block rounded-2xl border border-purple-500/20
+					bg-gray-900/70 overflow-hidden
+					hover:border-purple-500/50 transition-colors cursor-pointer"
 			>
 
 				<div class="h-2 bg-purple-500"></div>
@@ -276,15 +275,12 @@ import Block from '../assets/graswuerfel.svg';
 
 					</div>
 
-					<a
-						href="/outer-dark"
-						class="text-purple-400 hover:text-purple-300 font-semibold"
-					>
+					<div class="text-purple-400 font-semibold mt-6">
 						Projekt ansehen →
-					</a>
+					</div>
 
 				</div>
-			</div>
+			</a>
 
 		</div>
 
